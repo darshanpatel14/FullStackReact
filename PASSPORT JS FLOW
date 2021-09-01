@@ -1,0 +1,18 @@
+app.use(cookieSession) ---> as middleware for application as incoming requests
+
+
+
+whatever request comes in
+------------------------->
+            |
+            |
+            |
+            |
+     ________________ 
+          REQUEST   ->  COOKIE SESSION     ->     PASSPORT          ->      DESERIALIZE      -->  USER MODEL INSTANCE ADDED TO
+                                                                                                REQUEST OBJECT AS 'REQ.USER'
+                                                
+                        EXTRACTS COOKIE       PULLS USER ID                    USER    
+                        DATA                  OUT IF COOKIE DATA        FUNCTION WE WRITE 
+                                                                        TO TURN USER ID INTO 
+                                                                        A USER
